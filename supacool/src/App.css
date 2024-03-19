@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center; /* Keskittää tekstin, jos tarpeen */
+}
+
+
+
+.content {
+  margin: 0 auto;
+  flex-grow: 1; /* Täyttää jäljellä olevan tilan, jotta sisältö voi keskittyä */
+  display: flex;
+  justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+  text-align: center; /* Keskittää tekstin, jos tarpeen */
+  padding: 20px;
+}
