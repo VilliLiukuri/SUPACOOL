@@ -1,4 +1,40 @@
-
 header {
+    display: flex;
+    justify-content: space-between;
 }
- 
+
+.logo {
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center; /* Keskitä sisältö vaakasuunnassa */
+    align-items: center; /* Keskitä sisältö pystysuunnassa */
+}
+
+.cart {
+    display: flex; /* Käytä flexboxia */
+    justify-content: center; /* Keskitä sisältö vaakasuunnassa */
+    align-items: center; /* Keskitä sisältö pystysuunnassa */
+    height: 100%; /* Aseta korkeudeksi 100% parent-divin korkeudesta */
+    min-width: 200px;
+}
+
+.filler {
+    
+    min-width: 200px;
+    visibility: hidden; /* Piilottaa tekstin näkymättömäksi, jos se ei ole tarpeen */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      flex-direction: column; /* Aseta flexbox-suunta pystysuunnaksi */
+      padding: 10px; /* Pienennä ylimääräistä tilaa ylhäältä ja alhaalta */
+    }
+  
+    .logo, .cart {
+      text-align: center; /* Keskitä elementit pystysuunnassa */
+      margin-bottom: 10px; /* Lisää välistystä elementtien välille */
+    }
+    .cart {
+        font-size: 10px;
+    }
+  }

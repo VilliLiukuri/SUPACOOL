@@ -1,4 +1,7 @@
 button {
     font-family: 'Press Start 2P', cursive; /* Vaihda toivomaasi fonttiin */
     color: #ffffff;
+    background-color: #00000000;
+    border: 0px;
+    font-size: 2em;
   }

@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 import './Header.css';
 
 function Header() {
   return (
     <header>
-      {/* Lisää sovelluksesi logo tai nimi tähän */}
-      <h1><a href="/">SUPACOOL</a></h1>
-      {/* Voit lisätä navigointilinkkejä tässä osiossa */}
+      <div className="filler">PERSE</div>
+      <div className="logo">
+        <h1>
+          <Link to="/">SUPACOOL</Link>
+        </h1>
+      </div>
+      <div className="cart">
+        <Navigation />
+      </div>
     </header>
   );
 }

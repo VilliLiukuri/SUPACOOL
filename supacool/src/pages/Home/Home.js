@@ -6,8 +6,8 @@ function Home() {
   return (
     <div className="home">
       <div className="navigation-links">
-        <Link to="/shop" className="nav-link">SHOP</Link>
-        <Link to="/media" className="nav-link">MEDIA</Link>
+        <div className="shop"><Link to="/shop" className="nav-link">SHOP</Link></div>
+        <div className="media"><Link to="/media" className="nav-link">MEDIA</Link></div> 
       </div>
     </div>
   );

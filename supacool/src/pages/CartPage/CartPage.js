@@ -1,8 +1,8 @@
 import React from 'react';
-import './CartPage.css'; // Muista luoda tämä tyylitiedosto
+import './CartPage.css';
 
-function CartPage({ cartItems = [] }) { // Oletusarvo tyhjälle taulukolle, jos cartItems on undefined
-    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+function CartPage({ cartItems = [] }) {
+  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   
   return (
     <div className="cart-page">
@@ -12,7 +12,6 @@ function CartPage({ cartItems = [] }) { // Oletusarvo tyhjälle taulukolle, jos 
           {cartItems.map((item) => (
             <li key={item.id}>
               {item.name} - {item.quantity} x {item.price}€
-              {/* Voit lisätä tähän poistonappulan tai määrän muokkausvalinnat */}
             </li>
           ))}
         </ul>
@@ -20,7 +19,6 @@ function CartPage({ cartItems = [] }) { // Oletusarvo tyhjälle taulukolle, jos 
         <p>Ostoskorisi on tyhjä.</p>
       )}
       <p>Kokonaissumma: {totalPrice.toFixed(2)}€</p>
-      {/* Lisää Checkout-nappula tässä */}
     </div>
   );
 }
