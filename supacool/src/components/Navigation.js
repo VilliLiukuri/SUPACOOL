@@ -5,23 +5,27 @@ import Modal from './Modal';
 import CartPage from '../pages/CartPage/CartPage';
 import Button from './Button';
 
-function Navigation() {
+function Navigation({ cartItems }) {
   const location = useLocation();
   const [isCartOpen, setIsCartOpen] = React.useState(false);
-  const cartItems = []; // Ostoskorin kohteet
+
+  // Tarkista, että cartItems on määritelty ennen kuin yrität käyttää length-ominaisuutta
+  const itemsLength = cartItems ? cartItems.length : 0;
 
   return (
     <div className="navigation">
       {location.pathname === '/shop' && (
         <>
-          <Button onClick={() => setIsCartOpen(true)}>CART</Button>
+          <Button onClick={() => setIsCartOpen(true)}>CART ({itemsLength})</Button>
           <Modal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)}>
-            <CartPage cartItems={cartItems} />
+            <CartPage cartItems={cartItems || []} /> {/* Varmista, että cartItems ei ole undefined */}
           </Modal>
         </>
       )}
     </div>
   );
 }
+
+
 
 export default Navigation;

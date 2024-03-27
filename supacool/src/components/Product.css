@@ -1,4 +1,4 @@
-.item-image, img {
+.product-image, img {
     max-width: 100%;
     height: auto;
 }
@@ -9,12 +9,12 @@ img {
 .product {
     max-width: 500px;
 }
-.item {
+.product {
     display: flex;
     flex-direction: column;
 }
 
-.item-name {
+.product-name {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
